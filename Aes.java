@@ -9,3 +9,7 @@ import sun.misc.BASE64Encoder;
 public class Aes {
 	private static final String ALGO = "AES";
 	private byte[] keyvalue;
+	
+	private Aes(String key) {
+		keyvalue = key.getBytes();
+	}
