@@ -31,3 +31,8 @@ public class Aes {
 	public String encrypt (String Data) throws Exception {
 		Key key = generatekey();
 		Cipher c = Cipher.getInstance(ALGO);
+		c.init(Cipher.ENCRYPT_MODE, key);
+		byte[] encval = c.doFinal(Data.getBytes());
+		String encryptedvalue = new BASE64Encoder().encode(encval);
+		return encryptedvalue;
+	}
