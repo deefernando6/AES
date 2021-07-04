@@ -13,3 +13,7 @@ public class Aes {
 	private Aes(String key) {
 		keyvalue = key.getBytes();
 	}
+	
+	private Aes(String key) {
+		keyvalue = key.getBytes();
+	}
