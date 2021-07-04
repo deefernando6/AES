@@ -27,3 +27,7 @@ public class Aes {
 		String decryptedvalue = new String(decvalue);
 		return decryptedvalue;
 	}
+	
+	public String encrypt (String Data) throws Exception {
+		Key key = generatekey();
+		Cipher c = Cipher.getInstance(ALGO);
