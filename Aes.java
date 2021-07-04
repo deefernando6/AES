@@ -23,3 +23,7 @@ public class Aes {
 		Cipher c = Cipher.getInstance(ALGO);
 		c.init(Cipher.DECRYPT_MODE, key);
 		byte[] decodedvalue = new BASE64Decoder().decodeBuffer(encrypteddata);
+		byte[] decvalue = c.doFinal(decodedvalue);
+		String decryptedvalue = new String(decvalue);
+		return decryptedvalue;
+	}
