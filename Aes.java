@@ -17,3 +17,6 @@ public class Aes {
 	private Aes(String key) {
 		keyvalue = key.getBytes();
 	}
+	
+	public String decrypt (String encrypteddata) throws Exception {
+		Key key = generatekey();
