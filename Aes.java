@@ -36,3 +36,18 @@ public class Aes {
 		String encryptedvalue = new BASE64Encoder().encode(encval);
 		return encryptedvalue;
 	}
+	
+	public static void main(String args[]) {
+		try {
+			Aes aes = new Aes("lv39eptlvuhaqqsr");
+			String encdata  = aes.encrypt("Hello World");
+			System.out.println("Encrypted Data is - " + encdata);
+			String decdata = aes.decrypt(encdata);
+			System.out.println("Decrypted Data is - " + decdata);
+		}
+		catch (Exception ex){
+			Logger.getLogger(Aes.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+}
