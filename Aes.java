@@ -20,3 +20,6 @@ public class Aes {
 	
 	public String decrypt (String encrypteddata) throws Exception {
 		Key key = generatekey();
+		Cipher c = Cipher.getInstance(ALGO);
+		c.init(Cipher.DECRYPT_MODE, key);
+		byte[] decodedvalue = new BASE64Decoder().decodeBuffer(encrypteddata);
