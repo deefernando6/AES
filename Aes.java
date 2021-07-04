@@ -7,3 +7,5 @@ import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 public class Aes {
+	private static final String ALGO = "AES";
+	private byte[] keyvalue;
